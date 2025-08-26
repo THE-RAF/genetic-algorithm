@@ -9,7 +9,6 @@ A clean, professional genetic algorithm implementation for optimizing real-value
 - **Multiple Selection Methods**: Tournament and roulette wheel selection
 - **Dual Mutation Types**: Hard mutations (random replacement) and soft mutations (multiplicative adjustment)
 - **Built-in Visualization**: Automatic fitness tracking and plotting
-- **Type Hints**: Full type annotation support for modern Python development
 
 ## Quick Start
 
