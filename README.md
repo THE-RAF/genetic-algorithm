@@ -36,10 +36,10 @@ print(f"Best fitness: {result['best_fitness']}")
 
 ## Installation
 
-No installation required - this is a standalone module. Simply ensure you have the dependencies:
+Run in your terminal:
 
 ```bash
-pip install numpy matplotlib tqdm
+pip install git+https://github.com/THE-RAF/genetic-algorithm.git
 ```
 
 ## API Reference
