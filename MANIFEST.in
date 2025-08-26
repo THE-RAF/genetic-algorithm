@@ -1,0 +1,4 @@
+include README.md
+include pyproject.toml
+recursive-include genetic_algorithm *.py *.md
+recursive-include genetic_algorithm/examples *.py
