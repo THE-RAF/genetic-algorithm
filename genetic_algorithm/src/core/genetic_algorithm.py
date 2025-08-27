@@ -82,7 +82,7 @@ class GeneticAlgorithm:
             for _ in range(self.pop_size)
         ]
     
-    def select(self, population: List[RealGenome], fitnesses: List[float], population_fitness: float) -> List[RealGenome]:
+    def select(self, population: List[RealGenome], fitnesses: List[float]) -> List[RealGenome]:
         """
         Select parents for next generation.
         
@@ -95,7 +95,7 @@ class GeneticAlgorithm:
             Selected individuals for reproduction
         """
         if self.selection_method == 'roulette':
-            return Selection.roulette(population, fitnesses, population_fitness)
+            return Selection.roulette(population, fitnesses)
         elif self.selection_method == 'tournament':
             return Selection.tournament(population, fitnesses, self.tournament_k)
         else:
@@ -166,7 +166,7 @@ class GeneticAlgorithm:
         elite_population = Selection.elitism(self.population, fitnesses, self.elitism_number)
         
         # Selection, crossover, and mutation
-        self.population = self.select(self.population, fitnesses, population_fitness)
+        self.population = self.select(self.population, fitnesses)
         self.population = self.population_crossover(self.population)
         self.population = self.mutate_population(self.population)
         
